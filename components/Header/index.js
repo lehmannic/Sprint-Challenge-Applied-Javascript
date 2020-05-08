@@ -33,7 +33,7 @@ function Header() {
     temp.textContent = '98'
     // return parent
 
-    console.log("Header -> header", header)
+    // console.log("Header -> header", header)
     return header
 }
 // and append to the DOM inside the div.header-container
