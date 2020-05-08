@@ -53,13 +53,13 @@ axios.get('https://lambda-times-backend.herokuapp.com/articles')
     .then(response => {
         // grab appropriate response data
         const articles = response.data.articles
-        // console.log("articles", articles)
+        console.log("articles", articles)
 
         // push eveything from each 'subject' into an array so we can use .forEach
         // // 'subjects' -- bootstrap, javascript, jquery, node, technology
-        const subjectsArray = []
+        const subjectsArray = Array.from(articles)
         subjectsArray.push(articles.bootstrap, articles.javascript, articles.jquery, articles.node, articles.technology)
-        // console.log("subjectsArray", subjectsArray)
+        console.log("subjectsArray", subjectsArray)
 
         // push every article from each subject into new array 
         const everyArticle = []
